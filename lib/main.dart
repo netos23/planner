@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planner/decoration/circle_progress_bar.dart';
 
 void main() {
   runApp(MyApp());
@@ -93,6 +94,14 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            CircleProgressBar(
+              steps: 1000,
+              currentStep: _counter,
+              radius: 80,
+              thickness: 20,
+              progressColor: Colors.lightBlueAccent,
+              borderColor: Colors.blue,
+            ),
             Text(
               'You have pushed the button this many times:',
             ),
